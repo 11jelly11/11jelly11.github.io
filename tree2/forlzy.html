@@ -260,6 +260,11 @@
                 transform: translateX(-100%);
             }
         }
+        audio {
+            position: fixed;
+            top: 10px; /* 距离顶部的距离 */
+            left: 10px; /* 距离左侧的距离 */
+        }
 
     </style>
 
@@ -267,6 +272,8 @@
 
 </head>
 <body>
+
+
 <div id="scrolling-text1">祝贺林志怡圣诞节快乐！！！</div>
 <div id="scrolling-text2">祝宝宝圣诞节快乐！！！</div>
 <div id="scrolling-text3">林志怡我女神！！！</div>
@@ -595,5 +602,10 @@
 
     </div>
 </div>
+
+<audio autoplay="autoplay" controls="controls"loop="loop" preload="auto"
+       src="abcd.mp3">
+    </audio>
+
 </body>
 </html>
