@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>今天平安夜哦</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* 让 body 占据整个视口高度 */
+            background-color: #f0f0f0; /* 设置背景色 */
+        }
+
+        #open-popup-btn {
+            width: 300px;
+            height: 270px;
+            background-color: #e91e63; /* 粉红色 */
+            color: white; /* 文字渐变色 */
+            font-size: 25px; /* 文字大小 */
+            border: none;
+            cursor: pointer;
+            clip-path: polygon(
+                    50% 0%,
+                    90% 35%,
+                    100% 50%,
+                    90% 65%,
+                    50% 100%,
+                    10% 65%,
+                    0% 50%,
+                    10% 35%
+            );
+        }
+
+
+        #popup-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 998;
+        }
+
+        #popup-content {
+            background-color: white;
+            padding: 20px;
+            /* max-width: 80%; Remove this line or adjust as needed */
+            /* max-height: 80%; Remove this line or adjust as needed */
+            overflow: auto;
+        }
+
+        #close-popup-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 10px;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #popup-content img {
+            /* Ensure the image is not constrained by max-width and max-height */
+            width: 432px;
+            height: 705px;
+            max-width: none;
+            max-height: none;
+        }
+    </style>
+</head>
+<body>
+
+<button id="open-popup-btn">今天吃苹果了吗?</button>
+
+<div id="popup-container">
+    <div id="popup-content">
+        <button id="close-popup-btn">关闭</button>
+        <img src="001.jpg" alt="苹果照片">
+    </div>
+</div>
+
+<script>
+    var openPopupBtn = document.getElementById('open-popup-btn');
+    var popupContainer = document.getElementById('popup-container');
+    var closePopupBtn = document.getElementById('close-popup-btn');
+
+    openPopupBtn.addEventListener('click', function() {
+        popupContainer.style.display = 'flex';
+    });
+
+    closePopupBtn.addEventListener('click', function() {
+        popupContainer.style.display = 'none';
+    });
+</script>
+
+</body>
+</html>
